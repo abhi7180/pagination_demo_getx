@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lazy_load_scrollview/lazy_load_scrollview.dart';
 import 'package:pagination_demo_getx/controller/controller.dart';
+import 'package:pagination_demo_getx/resource/app_colors.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class HomePage extends StatelessWidget {
     Timer? debounce;
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: AppColors.white,
           title: TextField(
             controller: value.searchController,
             decoration: const InputDecoration(hintText: "search"),
@@ -50,7 +51,7 @@ class HomePage extends StatelessWidget {
                                     height: 40,
                                     width: 40,
                                     decoration: BoxDecoration(
-                                        color: Colors.grey.shade300,
+                                        color: AppColors.liteGrey,
                                         shape: BoxShape.circle),
                                     alignment: Alignment.center,
                                     child: const Text(
@@ -73,11 +74,11 @@ class HomePage extends StatelessWidget {
                                           width: 12,
                                           decoration: const BoxDecoration(
                                               shape: BoxShape.circle,
-                                              color: Color(0xff00FF44)),
+                                              color: AppColors.green),
                                           alignment: Alignment.center,
                                           child: const Icon(
                                             Icons.check,
-                                            color: Colors.black,
+                                            color:AppColors.black,
                                             size: 9,
                                           ),
                                         ),
@@ -107,7 +108,7 @@ class HomePage extends StatelessWidget {
                                 height: 40,
                                 width: 40,
                                 decoration: BoxDecoration(
-                                    color: Colors.grey.shade300,
+                                    color: AppColors.liteGrey,
                                     shape: BoxShape.circle),
                                 alignment: Alignment.center,
                                 child: const Text(
@@ -129,11 +130,11 @@ class HomePage extends StatelessWidget {
                                       width: 12,
                                       decoration: const BoxDecoration(
                                           shape: BoxShape.circle,
-                                          color: Color(0xff00FF44)),
+                                          color: AppColors.green),
                                       alignment: Alignment.center,
                                       child: const Icon(
                                         Icons.check,
-                                        color: Colors.black,
+                                        color:AppColors.black,
                                         size: 9,
                                       ),
                                     ),
@@ -153,9 +154,9 @@ class HomePage extends StatelessWidget {
             : Center(
                 child: value.isDataLoading.value
                     ? const CircularProgressIndicator()
-                    : const Icon(
+                    :  Icon(
                         Icons.search,
-                        color: Colors.grey,
+                        color: AppColors.grey,
                         size: 200,
                       ),
               )));
