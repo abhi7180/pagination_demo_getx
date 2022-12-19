@@ -34,6 +34,14 @@ class GetDataController extends GetxController {
     }
   }
 
+  void scrollUp() {
+    scrollController.animateTo(
+      scrollController.position.minScrollExtent,
+      duration: Duration(seconds: 2),
+      curve: Curves.fastOutSlowIn,
+    );
+  }
+
   loadMoreData(String searchText) {
     try {
       newDataLoading(true);

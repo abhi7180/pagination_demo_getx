@@ -34,6 +34,8 @@ dependencies:
   http: ^0.13.5
   get: ^4.6.5
   lazy_load_scrollview: ^1.3.0
+  lottie: ^2.1.0
+  image_picker: ^0.8.6
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -61,6 +63,8 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - assets/animation/
   fonts:
     - family: sfUiText
       fonts:
