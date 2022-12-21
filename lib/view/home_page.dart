@@ -126,6 +126,7 @@ class HomePage extends StatelessWidget {
                             ),
                             Obx(() => value.newDataLoading.value
                                 ? Center(
+
                                     child: Lottie.asset(
                                         StringResource.loadingAnimation,
                                         width: 100),
@@ -210,7 +211,7 @@ class HomePage extends StatelessWidget {
                           height: 200, width: 200, fit: BoxFit.cover)
                       : Column(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
+                          children: const [
                             Text(
                               "NO DATA!!",
                               style: TextStyle(
